@@ -24,7 +24,7 @@ STATE = "_ZN2nn5audio17SetVoicePlayStateEPNS0_9VoiceTypeENS1_9PlayStateE"
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--cc", default="cc")
+    parser.add_argument("--cc", default="gcc")
     parser.add_argument("--source", type=Path, default=ROOT / "host/nn_audio.c")
     args = parser.parse_args()
     spec = importlib.util.spec_from_file_location("audio_block_helper", ROOT / "tests/test_audio_deadline.py")
